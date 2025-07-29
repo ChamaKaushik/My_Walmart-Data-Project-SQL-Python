@@ -1,0 +1,52 @@
+pandas
+pymysql
+sqlalchemy
+
+## Instructions & Terminal Commands
+
+# Environment Setup
+
+# Windows Command Prompt Commands
+
+1. Installed Python from the [official website](https://www.python.org/downloads/).  
+
+2. To verify Python and pip are correctly installed:
+   ```cmd
+    python --version
+    pip --version
+
+
+# Kaggle API Setup (Windows)
+
+To access datasets using the Kaggle API:
+
+1. Generated the `kaggle.json` API token from my Kaggle account under **Account Settings > API > Create New API Token**.
+2. Created a `.kaggle` directory :
+   ```cmd 
+   mkdir %USERPROFILE%\.kaggle
+
+3. Move kaggle.json to the Kaggle directory :
+   ```cmd
+   copy %USERPROFILE%\Downloads\kaggle.json %USERPROFILE%\.kaggle\   
+
+# Download Datasets
+
+1. Navigate to the directory where I want to download the dataset
+   cd path/to/your/directory
+
+2. Download the dataset 
+   kaggle datasets download -d dataset-name
+
+3. Unzip the dataset
+   unzip dataset-name.zip   
+
+
+# Install the necessary Python libraries
+pip install pandas 
+
+
+# Summary of Commands
+1. **Environment Setup:** Install Python (Windows).
+2. **Kaggle API Setup:** Generate API token and configure kaggle.json.
+3. **Download Datasets:** Use Kaggle API commands to download datasets and unzip them.
+4. **Install Libraries:** Use pip to install required libraries for data analysis.
