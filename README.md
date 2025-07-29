@@ -1,7 +1,7 @@
 # Walmart Data Analysis using SQL and Python
 
 ## Project Overview
-This project is an end-to-end data analysis solution designed to extract critical business insights from Walmart sales data. We utilize Python for data processing and analysis, SQL for advanced querying, and structured problem-solving techniques to solve key business questions. The project is ideal for data analysts looking to develop skills in data manipulation, SQL querying, and data pipeline creation.
+This project is a complete end-to-end data analysis workflow focused on uncovering valuable business insights from Walmart's sales data. Using Python, the data is cleaned, transformed, and prepared before being loaded into a relational database. SQL is then used to perform complex queries and answer important business questions. This project is a great hands-on exercise for anyone looking to build practical skills in data analysis, SQL, and working with real-world datasets.
 
 
 
