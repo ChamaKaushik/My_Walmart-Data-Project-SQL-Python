@@ -1,9 +1,6 @@
-# Walmart Data Analysis: using SQL and Python 
+# Walmart Data Analysis : using SQL and Python 
 
 ## Project Overview
-
-![Project Pipeline](https://github.com/najirh/Walmart_SQL_Python/blob/main/walmart_project-piplelines.png)
-
 
 This project is a complete end-to-end data analysis workflow focused on uncovering valuable business insights from Walmart's sales data. Using Python, the data is cleaned, transformed, and prepared before being loaded into a relational database. SQL is then used to perform complex queries and answer important business questions. This project is a great hands-on exercise for anyone looking to build practical skills in data analysis, SQL, and working with real-world datasets.
 
@@ -12,60 +9,64 @@ This project is a complete end-to-end data analysis workflow focused on uncoveri
 ## Project Steps
 
 ### 1. Set Up the Environment
-   - **Tools Used**: Visual Studio Code (VS Code), Python, SQL (MySQL)
-   - **Goal**: Create a structured workspace within VS Code and organize project folders for smooth development and data handling.
+   - **Tools I Used**: Visual Studio Code (VS Code), Python, and MySQL
+   - **Purpose**: To create a clean and organized workspace in VS Code by setting up project folders and preparing the environment for writing code, managing data, and 
+                  running SQL queries smoothly.
 
 ### 2. Set Up Kaggle API
-   - **API Setup**: Obtain the Kaggle API token from [Kaggle](https://www.kaggle.com/) by navigating to profile settings and downloading the JSON file.
+   - **API Setup**: I generated my Kaggle API token by going to my Kaggle account settings and downloading the kaggle.json file.
    - **Configure Kaggle**: 
-      - Place the downloaded `kaggle.json` file in the local `.kaggle` folder.
-      - Use the command `kaggle datasets download -d <dataset-path>` to pull datasets directly into the project.
+      - Created a .kaggle folder in my user directory
+      - Moved the kaggle.json file into that folder.
+      - Used the following command to download the dataset directly into the project:
+        `` kaggle datasets download -d najir0123/walmart-10k-sales-datasets ``
 
 ### 3. Download Walmart Sales Data
-   - **Data Source**: Use the Kaggle API to download the Walmart sales datasets from Kaggle.
+   - **Data Source**: I used the Kaggle API to download the Walmart sales dataset directly from Kaggle.
    - **Dataset Link**: [Walmart Sales Dataset](https://www.kaggle.com/najir0123/walmart-10k-sales-datasets)
-   - **Storage**: Save the data in the `data/` folder for easy reference and access.
+   - **Storage**: After downloading, I saved the dataset inside the data/ folder to keep everything organized and easy to access during analysis.
 
 ### 4. Install Required Libraries and Load Data
-   - **Libraries**: Install necessary Python libraries using:
-     pip install pandas numpy sqlalchemy mysql-connector-python psycopg2
-   - **Loading Data**: Read the data into a Pandas DataFrame for initial analysis and transformations.
+   - **Libraries**: I installed the necessary Python libraries using the following command:  
+                     `` pip install pandas numpy sqlalchemy mysql-connector-python ``
+   - **Loading Data**: After setting up the environment, I loaded the dataset into a Pandas DataFrame to begin cleaning, exploring, and analyzing the sales data.
 
 ### 5. Explore the Data
-   - **Goal**: Conduct an initial data exploration to understand data distribution, check column names, types, and identify potential issues.
-   - **Analysis**: Use functions like `.info()`, `.describe()`, and `.head()` to get a quick overview of the data structure and statistics.
+   - **Purpose**: I started with a quick exploration of the dataset to understand the structure, column names, data types, and spot any missing or unusual values.
+   - **Initial Analysis**: Used basic Pandas functions like .head(), .info(), and .describe() to get a summary of the data and its distribution.
 
 ### 6. Data Cleaning
-   - **Remove Duplicates**: Identify and remove duplicate entries to avoid skewed results.
-   - **Handle Missing Values**: Drop rows or columns with missing values if they are insignificant; fill values where essential.
-   - **Fix Data Types**: Ensure all columns have consistent data types (e.g., dates as `datetime`, prices as `float`).
-   - **Currency Formatting**: Use `.replace()` to handle and format currency values for analysis.
-   - **Validation**: Check for any remaining inconsistencies and verify the cleaned data.
+   - **Duplicate Removal**:  I removed any duplicate records to keep the analysis accurate.
+   - **Missing Values**: Handled missing data by either dropping irrelevant rows or filling values where needed.
+   - **Fix Data Types**:  Converted columns to the correct data types — for example, dates to datetime and prices to float.
+   - **Currency Formatting**: Used .replace() to clean and convert currency values into a usable numeric format.
+   - **Final Validation**: Checked the cleaned dataset for consistency and confirmed it's ready for analysis.
 
 ### 7. Feature Engineering
-   - **Create New Columns**: Calculate the `Total Amount` for each transaction by multiplying `unit_price` by `quantity` and adding this as a new column.
-   - **Enhance Dataset**: Adding this calculated field will streamline further SQL analysis and aggregation tasks.
-
+   - **New Column Creation**: I added a Total Amount column by multipling unit_price with quantity for each transaction.
+   - **Why This Helps**: Including this calculated field made it easier to perform SQL aggregations and analyze total sales in later steps.
+     
 ### 8. Load Data into MySQL 
-   - **Set Up Connections**: Connect to MySQL using `sqlalchemy` and load the cleaned data into database.
-   - **Table Creation**: Set up tables in MySQL using Python SQLAlchemy to automate table creation and data insertion.
-   - **Verification**: Run initial SQL queries to confirm that the data has been loaded accurately.
+   - **Database Connection**: I connected to MySQL using SQLAlchemy and established the connection through Python.
+   - **Table Setup**: Used Python code to create tables and insert the cleaned DataFrame directly into the MySQL database.
+   - **Data Check**: Ran a few basic SQL queries to make sure the data was loaded correctly and matched the original DataFrame.
 
 ### 9. SQL Analysis: Complex Queries and Business Problem Solving
-   - **Business Problem-Solving**: Write and execute complex SQL queries to answer critical business questions, such as:
-     - Revenue trends across branches and categories.
-     - Identifying best-selling product categories.
+   - **Objective**: I wrote and executed complex SQL queries to answer key business questions using the cleaned Walmart sales data.
+   - **Key Analyses Included:**:
+     - Revenue trends across different branches and product categories
+     - Identified best-selling product categories.
      - Sales performance by time, city and payment method.
-     - Analyzing peak sales periods and customer buying patterns.
+     - Analyzed peak sales periods and customer buying patterns.
      - Profit margin analysis by branch and category.
-   - **Documentation**: Keep clear notes of each query's objective, approach, and results.
-
+   - **Documentation**: For each query, I documented the goal, logic, and key insights to ensure clarity and reproducibility.
+     
 ### 10. Project Publishing and Documentation
-   - **Documentation**: The entire workflow and analysis process is documented using Markdown and Jupyter Notebooks for clarity and transparency.
+   - **Documentation**: I documented the full project workflow using Markdown and Jupyter Notebooks to make the process easy to follow and understand.
    - **Project Publishing**: The project is published on GitHub and includes:
-     - A detailed `README.md` file explaining the project, setup, and usage.
-     - Python scripts and/or Jupyter Notebooks used for data processing and analysis.
-     - SQL scripts for querying the database.
+     - A well-structured README.md with project details, setup steps, and usage instructions.
+     - Python scripts and/or Jupyter Notebooks used for data cleaning, transformation, and analysis.
+     - SQL scripts for business-related queries and analysis.
      - Either the dataset itself or clear instructions on how to access/download it (e.g., from Kaggle).
 
 ---
@@ -76,7 +77,7 @@ This project is a complete end-to-end data analysis workflow focused on uncoveri
 - **SQL Database**: MySQL
 - **Python Libraries**:
   - `pandas`, `sqlalchemy`, `mysql-connector-python`
-- **Kaggle API Key**: required for downloading the dataset
+- **Kaggle API Key**: Required for downloading the dataset.
 
 ## Getting Started
 
@@ -105,18 +106,19 @@ This project is a complete end-to-end data analysis workflow focused on uncoveri
 
 ## Results and Insights
 
-This section will include Key takeaways from the analysis :
+Here are some key takeaways from the analysis performed on the Walmart sales data:
 
-- **Sales Insights**: Key categories, branches with highest sales, and preferred payment methods.
-- **Profitability**: Insights into the most profitable product categories and locations.
-- **Customer Behavior**: Trends in ratings, payment preferences, and peak shopping hours.
+- **Sales Insights**: Identified top-performing product categories, branches with the highest sales, and commonly used payment methods.
+- **Profitability**: Analyzed which product categories and locations generated the most profit.
+- **Customer Behavior**: Observed trends in customer ratings, preferred payment types, and peak shopping hours.
 
 ## Future Enhancements
 
-Possible extensions to this project:
-- Integration with a dashboard tool (e.g., Power BI or Tableau) for interactive visualization.
-- Additional data sources to enhance analysis depth.
-- Automation of the data pipeline for real-time data ingestion and analysis.
+Some improvements and extensions I plan to explore in the future:
+
+- **Dashboard Integration**: Connect the project with Power BI or Tableau to create interactive dashboards for better visualization and reporting.
+- **More Data Sources**: Combine additional datasets to gain deeper insights and expand the scope of analysis.
+- **Pipeline Automation**: Automate the data pipeline to handle real-time data ingestion, cleaning, and analysis more efficiently.
 
 ---
 
