@@ -18,7 +18,7 @@ This project is a complete end-to-end data analysis workflow focused on uncoveri
    - **Configure Kaggle**: 
       - Created a .kaggle folder in my user directory
       - Moved the kaggle.json file into that folder.
-      - Used the following command to download the dataset directly into the project:
+      - Used the following command to download the dataset directly into the project :
         `` kaggle datasets download -d najir0123/walmart-10k-sales-datasets ``
 
 ### 3. Download Walmart Sales Data
@@ -27,7 +27,7 @@ This project is a complete end-to-end data analysis workflow focused on uncoveri
    - **Storage**: After downloading, I saved the dataset inside the data/ folder to keep everything organized and easy to access during analysis.
 
 ### 4. Install Required Libraries and Load Data
-   - **Libraries**: I installed the necessary Python libraries using the following command:  
+   - **Libraries**: I installed the necessary Python libraries using the following command :  
                      `` pip install pandas numpy sqlalchemy mysql-connector-python ``
    - **Loading Data**: After setting up the environment, I loaded the dataset into a Pandas DataFrame to begin cleaning, exploring, and analyzing the sales data.
 
